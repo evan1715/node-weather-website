@@ -5,8 +5,6 @@
     With the request function in nodejs, we passed a callback as the second argument. 
     With the fetch api, we use the .then method on the return value from fetch and we provide to it the callback function. */
 
-console.log("Clientside javascript file is loaded.");
-
 const weatherForm = document.querySelector('form');
 const search = document.querySelector('input');
 const messageOne = document.querySelector('#message-1') //we use # instead of . because # is for id and . is for class
