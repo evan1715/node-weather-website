@@ -49,7 +49,7 @@ app.get('/about', (req, res) => {
 app.get('/help', (req, res) => {
     res.render('help.hbs', {
         title: 'Help page',
-        message: 'example text',
+        message: 'example text: 606 NOT FOUND',
         name: 'Evan'
     });
 });
