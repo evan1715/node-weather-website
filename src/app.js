@@ -12,7 +12,7 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 //Define paths for Express configuration
-const publicDirectioryPath = path.join(__dirname, '../public');
+const publicDirectoryPath = path.join(__dirname, '../public');
 const viewsPath = path.join(__dirname, '../templates/views'); //To use a different folder than the required "views" one
 const partialsPath = path.join(__dirname, '../templates/partials');
 
@@ -28,7 +28,7 @@ app.set('views', viewsPath);
 hbs.registerPartials(partialsPath);
 
 //Setup for static directory. This will use all .html pages in the public folder to go to different paths
-app.use(express.static(publicDirectioryPath));
+app.use(express.static(publicDirectoryPath));
 
 //Set up the route for handlebars
 app.get('', (req, res) => {
@@ -90,7 +90,7 @@ app.get('/products', (req, res) => {
     //we can only respond to a request once, so we add "return" to stop the function execution instead of continuing to the next res.send
     if (!req.query.search) {
         return res.send({
-            error: "You must provide a serch term."
+            error: "You must provide a search term."
         });
     }
 
